@@ -23,6 +23,8 @@ Questo repo pubblica in automatico post su Instagram (profilo dell'utente) da `q
 
 - Modelli di stile scritti dall'utente: cartella `esempi/` (non è la coda, non viene pubblicata). Leggili e imita tono, ritmo, elenchi puntati con "•" e prima persona. Gli esempi sono modelli di STILE, non contenuti da pubblicare. Tipi di struttura: racconto personale + elenco "Cosa ho capito"; oppure elenco di segnali/sintomi con etichetta in grassetto-stile ("Disturbi digestivi: ..."), chiusura con invito a non sottovalutare e a parlarne con un professionista. Terzo tipo (esempio 3): apertura con ✨ "Tutto quello che devi sapere:", 4-5 punti brevi con "•" (frasi secche, anche con → e parentesi), chiusura con 💛 e una frase personale in prima persona. Quarto tipo (esempio 4): breve e discorsivo, senza elenco: apertura con una frase netta + emoji (🌿), 2-3 paragrafi corti che partono da "nella mia esperienza", chiusura con il risultato personale. Non citare mai la dottoressa o fonti nel testo se l'utente non lo chiede. NON riusare i loro fatti (es. "6 mesi", percorso con la nutrizionista) in altre caption, se l'utente non li ripete per quel video.
 
+- Caption già finita dall'utente (con le sue frasi e CTA): in cima al `.txt` metti la riga `[COMPLETA]`; si pubblica tale e quale, con in più solo gli hashtag fissi.
+
 ## Dopo ogni modifica
 - Controlla che ogni foto in `queue/` abbia il suo `.txt`.
 - Fai commit e push su `main` (altrimenti il post non parte).
