@@ -25,6 +25,10 @@ Questo repo pubblica in automatico post su Instagram (profilo dell'utente) da `q
 
 - Caption già finita dall'utente (con le sue frasi e CTA): in cima al `.txt` metti la riga `[COMPLETA]`; si pubblica tale e quale, con in più solo gli hashtag fissi.
 
+## Caroselli
+- Un carosello = una cartella in `caroselli/queue/` (es. `carosello-02-nome/`) con `1.jpg`, `2.jpg`, ... (da 2 a 10 JPEG, in ordine) e `caption.txt`. Stesse regole di stile delle caption; se l'utente dà la caption finita, `[COMPLETA]` in cima.
+- Esce 1 volta a settimana, la domenica verso le 18:00 ora italiana, dalla cartella con nome più basso.
+
 ## Dopo ogni modifica
 - Controlla che ogni foto in `queue/` abbia il suo `.txt`.
 - Fai commit e push su `main` (altrimenti il post non parte).

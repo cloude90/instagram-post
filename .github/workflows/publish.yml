@@ -5,6 +5,9 @@ on:
     # Lun, mar, gio, sab: lo script pubblica solo verso le 12:30 italiane (ora legale e solare)
     - cron: "30 10 * * 1,2,4,6"
     - cron: "30 11 * * 1,2,4,6"
+    # Carosello: domenica verso le 18:00 italiane
+    - cron: "0 16 * * 0"
+    - cron: "0 17 * * 0"
   workflow_dispatch:
     inputs:
       dry_run:
@@ -33,6 +36,12 @@ jobs:
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
           DRY_RUN: ${{ inputs.dry_run && '1' || '0' }}
         run: python scripts/publish.py
+      - name: Pubblica il prossimo carosello
+        env:
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          DRY_RUN: ${{ inputs.dry_run && '1' || '0' }}
+        run: python scripts/publish_carosello.py
       - name: Salva lo spostamento in published/
         run: |
           git config user.name "autopost-bot"
