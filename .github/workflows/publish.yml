@@ -1,0 +1,41 @@
+name: Pubblica post
+
+on:
+  schedule:
+    # Lun, mar, gio, sab: lo script pubblica solo verso le 12:30 italiane (ora legale e solare)
+    - cron: "30 10 * * 1,2,4,6"
+    - cron: "30 11 * * 1,2,4,6"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Prova senza pubblicare"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Pubblica il prossimo post
+        env:
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          DRY_RUN: ${{ inputs.dry_run && '1' || '0' }}
+        run: python scripts/publish.py
+      - name: Salva lo spostamento in published/
+        run: |
+          git config user.name "autopost-bot"
+          git config user.email "autopost-bot@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet || (git commit -m "Post pubblicato" && git pull --rebase && git push)
