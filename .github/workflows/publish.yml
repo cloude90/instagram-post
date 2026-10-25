@@ -2,12 +2,12 @@ name: Pubblica post
 
 on:
   schedule:
-    # Lun, mar, gio, sab: lo script pubblica solo verso le 12:30 italiane (ora legale e solare)
-    - cron: "30 10 * * 1,2,4,6"
-    - cron: "30 11 * * 1,2,4,6"
-    # Carosello: domenica verso le 18:00 italiane
-    - cron: "0 16 * * 0"
-    - cron: "0 17 * * 0"
+    # Post: lun, mer, ven, dom verso le 11:00 italiane (ora legale e solare: lo script tiene l'orario giusto)
+    - cron: "0 9 * * 0,1,3,5"
+    - cron: "0 10 * * 0,1,3,5"
+    # Carosello: giovedì verso le 11:00 italiane
+    - cron: "0 9 * * 4"
+    - cron: "0 10 * * 4"
   workflow_dispatch:
     inputs:
       dry_run:

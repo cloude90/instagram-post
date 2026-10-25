@@ -27,9 +27,9 @@ Questo repo pubblica in automatico post su Instagram (profilo dell'utente) da `q
 
 ## Caroselli
 - Un carosello = una cartella in `caroselli/queue/` (es. `carosello-02-nome/`) con `1.jpg`, `2.jpg`, ... (da 2 a 10 JPEG, in ordine) e `caption.txt`. Stesse regole di stile delle caption; se l'utente dà la caption finita, `[COMPLETA]` in cima.
-- Esce 1 volta a settimana, la domenica verso le 18:00 ora italiana, dalla cartella con nome più basso.
+- Esce 1 volta a settimana, il giovedì verso le 11:00 ora italiana, dalla cartella con nome più basso.
 
 ## Dopo ogni modifica
 - Controlla che ogni foto in `queue/` abbia il suo `.txt`.
 - Fai commit e push su `main` (altrimenti il post non parte).
-- Pubblicazione: 4 post a settimana (lun, mar, gio, sab verso le 12:30 ora italiana), in ordine alfabetico. Solo foto JPEG (no HEIC). Questo repo è PUBBLICO: non scrivere nulla di riservato.
+- Pubblicazione: 4 post a settimana (lun, mer, ven, dom verso le 11:00 ora italiana), in ordine alfabetico. Solo foto JPEG (no HEIC). Questo repo è PUBBLICO: non scrivere nulla di riservato.

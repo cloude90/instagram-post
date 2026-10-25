@@ -19,9 +19,9 @@ ROOT = Path(__file__).resolve().parent.parent
 QUEUE, DONE = ROOT / "queue", ROOT / "published"
 STATE = ROOT / "state" / "last_publish.txt"
 
-# Giorni (0=lun) e fasce orarie italiane delle uscite: lun, mar, gio, sab verso le 12:30
-DAYS = (0, 1, 3, 5)
-SLOT = ((12, 0), (13, 15))
+# Giorni (0=lun) e fascia oraria italiana delle uscite: lun, mer, ven, dom verso le 11:00
+DAYS = (0, 2, 4, 6)
+SLOT = ((10, 30), (11, 45))
 
 
 def call(url, data=None, headers=None, method=None):

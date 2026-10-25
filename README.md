@@ -1,6 +1,6 @@
 # Instagram Post (foto)
 
-Pubblica foto singole su Instagram: lun, mar, gio, sab verso le 12:30.
+Pubblica foto singole su Instagram: lun, mer, ven, dom verso le 11:00.
 Repo PUBBLICO (serve a Instagram per scaricare la foto): non metterci nulla di privato.
 
 Per ogni post, in `queue/`: `NOME.jpg` + `NOME.txt` (caption). Solo JPEG, no HEIC.

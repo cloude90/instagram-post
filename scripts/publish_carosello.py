@@ -17,9 +17,9 @@ import publish as p
 QUEUE, DONE = p.ROOT / "caroselli" / "queue", p.ROOT / "caroselli" / "published"
 STATE = p.ROOT / "state" / "last_carosello.txt"
 
-# Domenica verso le 18:00 italiane
-DAY = 6
-SLOT = ((17, 45), (18, 59))
+# Giovedì verso le 11:00 italiane
+DAY = 3
+SLOT = ((10, 30), (11, 45))
 
 
 def in_slot() -> bool:
