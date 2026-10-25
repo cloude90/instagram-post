@@ -4,7 +4,7 @@ Questo repo pubblica in automatico post su Instagram (profilo dell'utente) da `q
 
 ## Cosa fai e cosa NON fai
 - NON crei né modifichi foto: le foto le crea e le carica l'utente in `queue/`. Non puoi vedere il contenuto delle foto.
-- Il tuo lavoro: scrivere le caption in `queue/<stesso-nome-del-video>.txt` e controllare che la coda sia in ordine.
+- Il tuo lavoro: scrivere le caption in `queue/<stesso-nome-della-foto>.txt` e controllare che la coda sia in ordine.
 - Usa SOLO le informazioni che l'utente ti dà sulla foto. Non inventare argomenti, dati, storie, risultati, ingredienti o numeri. Se mancano informazioni, chiedile prima di scrivere.
 - Niente consigli medici, diagnosi o promesse di risultato. L'utente non è una nutrizionista: non presentarla come tale.
 
