@@ -49,7 +49,7 @@ def next_cta() -> str:
 def build_caption(image: Path) -> str:
     """Frase iniziale + caption + frase finale + CTA + hashtag fissi.
 
-    Se il .txt inizia con [COMPLETA] si pubblica tale e quale (più frase iniziale, se manca, e hashtag).
+    Se il .txt inizia con [COMPLETA] si pubblica tale e quale (più frase iniziale e frase finale, se mancano, e hashtag).
     Nel .txt la CTA va dopo una riga con solo `---`; se scrivi solo NESSUNA, nessuna CTA.
     """
     raw = read(image.with_suffix(".txt"))
@@ -59,6 +59,9 @@ def build_caption(image: Path) -> str:
         intro = read(ROOT / "config" / "frase_iniziale.txt")
         if intro and not body.startswith(intro):
             body = f"{intro}\n\n{body}"
+        outro = read(ROOT / "config" / "frase_finale.txt")
+        if outro and outro not in body:
+            body = f"{body}\n\n{outro}"
         tags = read(ROOT / "config" / "hashtag.txt")
         return "\n\n".join(p for p in (body, tags) if p)
     caption, _, cta = raw.partition("\n---\n")
